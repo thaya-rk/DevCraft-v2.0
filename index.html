@@ -1,0 +1,131 @@
+<html lang="en" class="default-theme">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevCraft</title>
+    <meta
+      name="keywords"
+      content="html, css, js, code editor, compiler, tryit editor, ace editor, web design, code playground, live editor"
+    />
+    <meta
+      name="description"
+      content="Code editor for working with html css and js code online. Easily design web pages and templates and view live result side by side."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+    <link
+      rel="preload"
+      href="./fonts/BioRhyme-Regular-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./fonts/BioRhyme-Regular-latin_ext.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+
+
+    <script>
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=G-GJCHG84XCY";
+      document.head.appendChild(ga);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag("js", new Date());
+      window.gtag("config", "G-GJCHG84XCY");
+    </script>
+
+
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item-1 ">
+        <!-- /////navbar/////////// -->
+        <nav class="navbar">
+          <ul>
+            <li class="titleNav">
+              <a href="#" class="titleNavLink">DevCraft</a>
+            </li>
+            <span class="ariahidden"></span>
+            <li class="navitem active" onclick="toggle(this,0)">
+              <a href="#" class="htmlNavLink">
+                <img
+                  src="./img/html5-brands.svg"
+                  alt="html5"
+                  width="20px"
+                  height="20px"
+                  style="vertical-align: middle; filter: invert(1); margin-top: -2px"
+                />
+                HTML</a
+              >
+            </li>
+            <li class="navitem" onclick="toggle(this,1)">
+              <a href="#" class="cssNavLink"
+                ><img
+                  src="./img/css3-brands.svg"
+                  alt="css3"
+                  width="20px"
+                  height="18px"
+                  style="vertical-align: middle; filter: invert(1); margin-top: -2px"
+                />
+                CSS</a
+              >
+            </li>
+            <li class="navitem" onclick="toggle(this,2)">
+              <a href="#" class="jsNavLink"
+                ><img
+                  src="./img/js-brands.svg"
+                  alt="js"
+                  width="20px"
+                  height="21px"
+                  style="vertical-align: middle; filter: invert(1); margin-top: -2px"
+                />
+                JS</a
+              >
+            </li>
+            <li class="navitem active" onclick="toggle(this,3)">
+              <a href="#" class="resultNavLink">RESULT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <!-- ///////////editor////////// -->
+      <div data-flex-splitter-horizontal class="flex-item-2 bigscreen">
+        <div id="htmlEditor" class="editor fi-2-column-1 con"></div>
+        <div id="cssEditor" class="editor fi-2-column-2 con"></div>
+        <div id="jsEditor" class="editor fi-2-column-3 con"></div>
+        <iframe id="ifrResult" class="fi-2-column-4 con"></iframe>
+      </div>
+    </div>
+
+
+    <!-- /////////scripts//////// -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/ace/ace.js"></script>
+    <script type="text/javascript" src="./js/ace/mode-css.js"></script>
+    <script type="text/javascript" src="./js/ace/mode-javascript.js"></script>
+    <script type="text/javascript" src="./js/ace/mode-html.js"></script>
+    <script type="text/javascript" src="./js/ace/worker-css.js"></script>
+    <script type="text/javascript" src="./js/ace/worker-javascript.js"></script>
+    <script type="text/javascript" src="./js/ace/worker-html.js"></script>
+    <script type="text/javascript" src="./js/ace/theme-crimson_editor.js"></script>
+    <script type="text/javascript" src="./js/ace/theme-monokai.js"></script>
+  </body>
+</html>
